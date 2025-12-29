@@ -1,0 +1,944 @@
+/* General Styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Hero Section */
+.hero-section {
+    background: #f8f9fa;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background-size: cover;
+}
+
+/* Category Cards */
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Product Cards */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card .price {
+    font-size: 1.1rem;
+}
+
+/* Cart Badge */
+.badge {
+    font-size: 0.7rem;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Cards */
+.card {
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 600;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+/* Footer */
+footer a {
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+}
+
+/* Admin Styles */
+.sidebar {
+    min-height: calc(100vh - 56px);
+    background-color: #343a40;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    border-left: 4px solid var(--primary-color);
+}
+
+.dashboard-card.success {
+    border-left-color: var(--success-color);
+}
+
+.dashboard-card.warning {
+    border-left-color: #ffc107;
+}
+
+.dashboard-card.danger {
+    border-left-color: var(--danger-color);
+}
+
+/* Tables */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Status Badges */
+.badge-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* 
+Enhanced Product Cards */
+.product-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Enhanced Category Cards */
+.category-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: white;
+    border-radius: 12px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.category-card i {
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover i {
+    transform: scale(1.1);
+}
+
+/* Section Titles */
+section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+}
+
+
+/* Cart Count - No Animation */
+#cart-count {
+    transition: all 0.3s ease;
+}
+
+/* Enhanced Navigation Styles */
+.navbar {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.nav-hover {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-hover:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
+    transform: translateY(-2px);
+}
+
+.nav-icon-hover {
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-icon-hover:hover {
+    background: rgba(0, 0, 0, 0.1) !important;
+    transform: scale(1.1);
+}
+
+.dropdown-hover {
+    transition: all 0.3s ease;
+}
+
+.dropdown-hover:hover {
+    background: #f8f9fa !important;
+    transform: translateX(5px);
+}
+
+/* Simple Search Box */
+.input-group .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.input-group .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.input-group .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* Badge - No Animation */
+
+.user-avatar {
+    transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Dropdown Menu Enhancements */
+.dropdown-menu {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.dropdown-item {
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: #f8f9fa !important;
+    color: #333 !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        margin-top: 15px;
+        padding: 20px;
+    }
+
+    .navbar-collapse .nav-link {
+        color: #333 !important;
+        margin: 5px 0;
+    }
+
+    .navbar-collapse .nav-hover:hover {
+        background: rgba(0, 0, 0, 0.05) !important;
+        color: #333 !important;
+    }
+}
+
+/* Desktop - Ensure dark text */
+@media (min-width: 992px) {
+    .navbar .nav-link {
+        color: #333 !important;
+    }
+
+    .navbar .navbar-brand {
+        color: #333 !important;
+    }
+}
+
+/* Simple Modern Navigation */
+.navbar {
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.nav-hover {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-hover:hover {
+    background: #f8f9fa !important;
+    color: #333 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn {
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.action-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+.user-menu:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
+    transform: translateY(-2px);
+}
+
+.login-btn {
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #333 !important;
+    color: white !important;
+    border-color: #333 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item:hover {
+    background: #f8f9fa !important;
+    color: #333 !important;
+    transform: translateX(5px);
+}
+
+/* Badge - No Animation */
+
+.modern-navbar.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand Styles */
+.modern-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.modern-brand:hover {
+    transform: scale(1.05);
+}
+
+.brand-logo {
+    max-height: 50px;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+
+.brand-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+}
+
+.brand-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.brand-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Modern Toggle Button */
+.modern-toggler {
+    border: none;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.modern-toggler:focus {
+    box-shadow: none;
+}
+
+.modern-toggler span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.modern-toggler:hover span {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Navigation Links */
+.modern-nav {
+    margin-left: 2rem;
+}
+
+.modern-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px !important;
+    margin: 0 4px;
+    border-radius: 25px;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.modern-nav-link:hover::before {
+    left: 100%;
+}
+
+.modern-nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modern-nav-link i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Modern Search */
+.modern-search {
+    margin: 0 2rem;
+}
+
+.search-container {
+    position: relative;
+    width: 320px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 50px 12px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.search-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Action Links */
+.modern-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modern-action-link {
+    padding: 8px !important;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.modern-action-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.action-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-icon i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.action-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+}
+
+.cart-badge {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.wishlist-badge {
+    background: linear-gradient(135deg, #ff6b6b, #c44569);
+}
+
+/* User Menu */
+.modern-user-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px !important;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.modern-user-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white !important;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.user-avatar i {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.user-name {
+    font-weight: 500;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Login Button */
+.modern-login-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px !important;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.modern-login-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modern-login-btn i {
+    margin-right: 8px;
+}
+
+/* Modern Dropdown */
+.modern-dropdown {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 8px;
+    margin-top: 8px;
+    min-width: 200px;
+}
+
+.user-dropdown {
+    min-width: 240px;
+}
+
+.modern-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 2px 0;
+}
+
+.modern-dropdown-item:hover {
+    background: #f8f9fa;
+    color: #333;
+    transform: translateX(5px);
+}
+
+.modern-dropdown-item i {
+    margin-right: 12px;
+    width: 16px;
+    text-align: center;
+}
+
+.admin-item:hover {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.logout-item:hover {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .modern-navbar {
+        padding: 1rem 0;
+    }
+
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 15px;
+        margin-top: 15px;
+        padding: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .modern-nav {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .modern-nav-link {
+        color: #333 !important;
+        margin: 4px 0;
+    }
+
+    .modern-nav-link:hover {
+        background: rgba(0, 0, 0, 0.05);
+        color: #333 !important;
+    }
+
+    .modern-search {
+        margin: 20px 0;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-input {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #333;
+    }
+
+    .search-input::placeholder {
+        color: #666;
+    }
+
+    .search-btn {
+        background: #333;
+        color: white;
+    }
+
+    .modern-actions {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .modern-action-link,
+    .modern-user-link,
+    .modern-login-btn {
+        background: rgba(0, 0, 0, 0.05);
+        color: #333 !important;
+    }
+
+    .action-icon i,
+    .user-avatar i {
+        color: #333;
+    }
+}
+
+
+/* Badge - No Animation */
+.badge {
+    animation: none !important;
+}
+
+/* Đảm bảo cart count luôn hiển thị */
+#cart-count {
+    transition: all 0.3s ease;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* XÓA TẤT CẢ ANIMATION CHO BADGE */
+.badge,
+.badge.bg-success,
+.badge.bg-primary,
+.badge.bg-warning,
+.badge.bg-danger,
+.badge.bg-info,
+.badge.bg-secondary {
+    animation: none !important;
+    transform: none !important;
+}
+
+/* Xóa animation cho tất cả các element */
+* {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+}
+
+/* XÓA TẤT CẢ ANIMATION - OVERRIDE BOOTSTRAP */
+*,
+*::before,
+*::after {
+    animation: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 0 !important;
+}
+
+/* Đặc biệt xóa animation và transition cho badge */
+.badge,
+span.badge,
+.table .badge,
+td .badge,
+.badge.bg-success,
+.badge.bg-primary,
+.badge.bg-warning,
+.badge.bg-danger {
+    animation: none !important;
+    transform: scale(1) !important;
+    transition: none !important;
+}
+
+/* FIX BADGE POSITION - ĐỒNG BỘ TẤT CẢ TRANG */
+.btn.position-relative .badge.translate-middle,
+.position-relative .badge.translate-middle {
+    position: absolute !important;
+    top: 0 !important;
+    left: 100% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 0.7rem !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.25em 0.5em !important;
+}
+
+/* Override Bootstrap translate-middle */
+.translate-middle {
+    transform: translate(-50%, -50%) !important;
+}
+
+/* Đảm bảo parent button có position relative */
+a.btn[href="wishlist.php"],
+a.btn[href="cart.php"] {
+    position: relative !important;
+}
+
+/* Fix cho badge trong navbar */
+.navbar .badge.translate-middle,
+header .badge.translate-middle {
+    position: absolute !important;
+    top: 0 !important;
+    left: 100% !important;
+    transform: translate(-50%, -50%) !important;
+}

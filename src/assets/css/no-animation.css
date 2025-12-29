@@ -1,0 +1,82 @@
+/* XÓA TẤT CẢ ANIMATION - OVERRIDE BOOTSTRAP VÀ MỌI THỨ */
+
+/* Xóa animation cho tất cả */
+*,
+*::before,
+*::after,
+html,
+body,
+div,
+span,
+a,
+button,
+input,
+select,
+textarea,
+table,
+tr,
+td,
+th {
+    animation: none !important;
+    animation-name: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 0 !important;
+    animation-fill-mode: none !important;
+    animation-play-state: paused !important;
+    transition: none !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+}
+
+/* Đặc biệt cho badge */
+.badge,
+span.badge,
+.table .badge,
+td .badge,
+th .badge,
+.badge.bg-success,
+.badge.bg-primary,
+.badge.bg-warning,
+.badge.bg-danger,
+.badge.bg-info,
+.badge.bg-secondary,
+.badge.rounded-pill,
+.position-absolute.badge {
+    animation: none !important;
+    animation-name: none !important;
+    transform: scale(1) !important;
+    transition: none !important;
+    transition-duration: 0s !important;
+}
+
+/* Xóa tất cả @keyframes có thể có */
+@keyframes none {
+
+    0%,
+    100% {
+        transform: none;
+    }
+}
+
+
+/* FIX BADGE POSITION - FORCE OVERRIDE */
+.badge.translate-middle,
+.position-absolute.translate-middle.badge,
+span.badge.translate-middle {
+    position: absolute !important;
+    top: 0 !important;
+    left: 100% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 0.7rem !important;
+}
+
+/* Đảm bảo badge luôn ở góc trên phải */
+.btn-outline-light .badge,
+a[href="wishlist.php"] .badge,
+a[href="cart.php"] .badge {
+    position: absolute !important;
+    top: 0 !important;
+    left: 100% !important;
+    transform: translate(-50%, -50%) !important;
+}

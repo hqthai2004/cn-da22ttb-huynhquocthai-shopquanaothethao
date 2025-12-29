@@ -1,0 +1,566 @@
+/* Clean E-commerce Navigation */
+.ecommerce-nav {
+    padding: 1.2rem 0 !important;
+    border-bottom: 1px solid #e9ecef;
+    background: #ffffff !important;
+}
+
+.ecommerce-nav .navbar-brand {
+    font-size: 2.2rem !important;
+    color: #2c3e50 !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+}
+
+.ecommerce-nav .navbar-brand:hover {
+    color: #3498db !important;
+    transform: scale(1.05) !important;
+    transition: all 0.3s ease !important;
+}
+
+.ecommerce-nav .navbar-brand img {
+    height: 50px !important;
+    width: auto !important;
+    margin-right: 10px !important;
+}
+
+.ecommerce-nav .navbar-brand i {
+    font-size: 2.3rem !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Navigation Links */
+.ecommerce-nav .nav-link {
+    color: #495057;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin: 0 0.25rem;
+}
+
+.ecommerce-nav .nav-link:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.ecommerce-nav .nav-link.active {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.15);
+    font-weight: 600;
+}
+
+.ecommerce-nav .nav-link i {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Dropdown Menu */
+.ecommerce-nav .dropdown-menu {
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    margin-top: 0.25rem;
+}
+
+.ecommerce-nav .dropdown-item {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.ecommerce-nav .dropdown-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.ecommerce-nav .dropdown-item i {
+    width: 16px;
+    text-align: center;
+}
+
+/* Action Buttons */
+.ecommerce-nav .btn {
+    border-radius: 50px;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.ecommerce-nav .btn-outline-light {
+    border-color: #dee2e6;
+    color: #495057;
+}
+
+.ecommerce-nav .btn-outline-light:hover {
+    background-color: #f8f9fa;
+    border-color: #adb5bd;
+    color: #495057;
+}
+
+.ecommerce-nav .btn-outline-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.ecommerce-nav .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Badge Styling */
+.ecommerce-nav .badge {
+    font-size: 0.7rem;
+    padding: 0.25em 0.5em;
+}
+
+/* XÓA HOÀN TOÀN TẤT CẢ BADGE TRONG PRODUCT CARDS TRỪ BADGE SALE */
+.product-card .badge.bg-danger,
+.card .badge.bg-danger {
+    display: none !important;
+}
+
+/* CHỈ HIỂN THỊ BADGE SALE (không phải wishlist count) */
+.product-card .badge.bg-danger:contains("Sale"),
+.card .badge.bg-danger:contains("Sale") {
+    display: block !important;
+}
+
+/* BADGE SALE CỤ THỂ - position absolute ở góc trên */
+.product-card .badge.bg-danger.position-absolute.top-0.end-0,
+.card .badge.bg-danger.position-absolute.top-0.end-0 {
+    display: block !important;
+}
+
+/* CHỈ HIỂN THỊ BADGE TRONG NAVBAR/HEADER */
+header .badge.bg-danger,
+.navbar .badge.bg-danger,
+.nav .badge.bg-danger {
+    display: inline-block !important;
+}
+
+/* ẨN MỌI BADGE KHÁC TRONG PRODUCT CARDS */
+.product-card .badge.translate-middle,
+.card .badge.translate-middle,
+.product-card .position-absolute.badge:not(.top-0.end-0),
+.card .position-absolute.badge:not(.top-0.end-0) {
+    display: none !important;
+}
+
+/* Trừ badge Sale trong product cards */
+.product-card .badge:not(.bg-danger),
+.card .badge:not(.bg-danger) {
+    display: block !important;
+}
+
+/* Product Card Button Alignment */
+.product-card .d-flex.gap-2 {
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.product-card .btn-sm {
+    height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 38px !important;
+    padding: 0.375rem 0.75rem !important;
+    box-sizing: border-box !important;
+    border-width: 1px !important;
+}
+
+.product-card .wishlist-btn {
+    flex-shrink: 0 !important;
+    width: 38px !important;
+    height: 38px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.product-card .btn.flex-grow-1 {
+    flex: 1 !important;
+}
+
+/* Icon trong wishlist button - KHÔI PHỤC ICON */
+.product-card .wishlist-btn i {
+    font-size: 14px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    color: inherit !important;
+}
+
+/* Đảm bảo wishlist button hiển thị đúng */
+.product-card .wishlist-btn {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+/* Đảm bảo FontAwesome icons hiển thị */
+.product-card .wishlist-btn i.fa-heart,
+.product-card .wishlist-btn i.fas,
+.product-card .wishlist-btn i.far {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* ẨN MỌI SPAN/TEXT TRONG WISHLIST BUTTON TRỪ ICON */
+.product-card .wishlist-btn span,
+.product-card .wishlist-btn .badge,
+.card .wishlist-btn span,
+.card .wishlist-btn .badge {
+    display: none !important;
+}
+
+/* ẨN MỌI ELEMENT CON TRONG WISHLIST BUTTON TRỪ ICON */
+.product-card .wishlist-btn>*:not(i),
+.card .wishlist-btn>*:not(i) {
+    display: none !important;
+}
+
+/* ĐẢM BẢO CHỈ ICON HIỂN THỊ */
+.product-card .wishlist-btn {
+    text-indent: 0 !important;
+    font-size: 0 !important;
+}
+
+.product-card .wishlist-btn i {
+    font-size: 14px !important;
+    text-indent: 0 !important;
+}
+
+/* Đảm bảo text trong button "Xem Chi Tiết" căn giữa */
+.product-card .btn-outline-primary {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Fix cụ thể cho alignment */
+.product-card .d-flex.gap-2>* {
+    vertical-align: top !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .ecommerce-nav {
+        padding: 0.5rem 0;
+    }
+
+    .ecommerce-nav .navbar-brand {
+        font-size: 1.8rem !important;
+    }
+
+    .ecommerce-nav .navbar-brand img {
+        height: 42px !important;
+    }
+
+    .ecommerce-nav .navbar-brand i {
+        font-size: 1.9rem !important;
+    }
+
+    .ecommerce-nav .navbar-collapse {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e9ecef;
+    }
+
+    .ecommerce-nav .nav-link {
+        margin: 0.25rem 0;
+        padding: 0.75rem 1rem;
+    }
+
+    .ecommerce-nav .d-flex {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e9ecef;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .ecommerce-nav .navbar-brand {
+        font-size: 1.6rem !important;
+    }
+
+    .ecommerce-nav .navbar-brand img {
+        height: 38px !important;
+    }
+
+    .ecommerce-nav .navbar-brand i {
+        font-size: 1.7rem !important;
+    }
+
+    .ecommerce-nav .btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Smooth Animations */
+.ecommerce-nav * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll Effect */
+.ecommerce-nav.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Products Page Header Styling */
+.products-header {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.products-header h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin: 0;
+}
+
+.products-header .text-primary {
+    color: #007bff !important;
+}
+
+.products-header small {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Search Input in Products */
+.products-header .input-group {
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+    border-radius: 25px;
+    overflow: hidden;
+    background: white;
+    border: 2px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.products-header .input-group:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.products-header .form-control {
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.products-header .form-control:focus {
+    box-shadow: none;
+    background: transparent;
+}
+
+.products-header .form-control::placeholder {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.products-header .btn {
+    border: none;
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.products-header .btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+.products-header .btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: scale(1.05);
+}
+
+.products-header .btn-outline-secondary {
+    background: #dc3545;
+    color: white;
+    border: none;
+}
+
+.products-header .btn-outline-secondary:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* Responsive for Products Header */
+@media (max-width: 768px) {
+    .products-header {
+        padding: 1.5rem;
+        margin: 1rem;
+        border-radius: 12px;
+    }
+
+    .products-header .d-flex {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 1.5rem;
+    }
+
+    .products-header h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .products-header .input-group {
+        width: 100% !important;
+        border-radius: 20px;
+    }
+
+    .products-header h2 small {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Badge - No Animation */
+
+/* Force Logo Size Override */
+.navbar-brand,
+.navbar-brand span,
+.navbar-brand img,
+.navbar-brand i {
+    font-size: 2.2rem !important;
+    height: 50px !important;
+}
+
+.navbar-brand img {
+    max-height: 50px !important;
+    min-height: 50px !important;
+}
+
+.navbar-brand i.fas {
+    font-size: 2.3rem !important;
+}
+
+/* Clear any conflicting styles */
+.ecommerce-nav .container .navbar-brand {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+}
+
+.ecommerce-nav .container .navbar-brand img {
+    height: 50px !important;
+    width: auto !important;
+}
+
+/* FORCE LARGE LOGO - ULTIMATE OVERRIDE */
+.navbar-brand[href="index.php"] {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+}
+
+.navbar-brand[href="index.php"] img {
+    height: 60px !important;
+    width: auto !important;
+    max-height: 60px !important;
+    min-height: 60px !important;
+}
+
+.navbar-brand[href="index.php"] i.fas {
+    font-size: 2.6rem !important;
+}
+
+/* Navbar height adjustment */
+.ecommerce-nav.navbar {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .navbar-brand[href="index.php"] {
+        font-size: 2rem !important;
+    }
+
+    .navbar-brand[href="index.php"] img {
+        height: 50px !important;
+        max-height: 50px !important;
+        min-height: 50px !important;
+    }
+
+    .navbar-brand[href="index.php"] i.fas {
+        font-size: 2.1rem !important;
+    }
+}
+
+/* Logo Alignment Fix */
+.navbar-brand.d-flex.align-items-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    vertical-align: middle !important;
+}
+
+.navbar-brand.d-flex.align-items-center img {
+    vertical-align: middle !important;
+    display: inline-block !important;
+    margin: 0 !important;
+}
+
+/* Navbar container alignment */
+.ecommerce-nav .container {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.ecommerce-nav .navbar-nav {
+    align-items: center !important;
+}
+
+.ecommerce-nav .nav-link {
+    display: flex !important;
+    align-items: center !important;
+    height: 60px !important;
+    line-height: 60px !important;
+}
+
+/* Wishlist Animation Enhancements */
+.btn-outline-danger i {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover i {
+    transform: scale(1.1);
+}
+
+.btn-outline-danger.text-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline-danger.text-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Badge - No Animation */
